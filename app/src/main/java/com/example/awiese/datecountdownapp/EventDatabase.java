@@ -6,9 +6,7 @@ import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
-/**
- * Created by AWiese on 2017/10/12.
- */
+
 @Database(entities = {Event.class}, version = 1)
 @TypeConverters(DateTypeConverters.class)
 public abstract class EventDatabase extends RoomDatabase {
