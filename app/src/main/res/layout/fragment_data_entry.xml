@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:text="@string/add_event"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="158dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
