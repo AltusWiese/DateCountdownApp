@@ -7,7 +7,7 @@ import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
 
-@Database(entities = {Event.class}, version = 1)
+@Database(entities = {Event.class}, version = 1, exportSchema = false)
 @TypeConverters(DateTypeConverters.class)
 public abstract class EventDatabase extends RoomDatabase {
 

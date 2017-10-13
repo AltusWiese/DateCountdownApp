@@ -4,8 +4,7 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import static com.example.awiese.datecountdownapp.Event.TABLE_NAME;
 
@@ -14,6 +13,7 @@ import static com.example.awiese.datecountdownapp.Event.TABLE_NAME;
  * Created by AWiese on 2017/10/12.
  */
 @Entity(tableName = TABLE_NAME)
+
 public class Event {
 
     public static final String TABLE_NAME = "events";
@@ -24,9 +24,9 @@ public class Event {
     private String name;
     private String description;
     @ColumnInfo(name = DATE_FIELD)
-    private LocalDateTime date;
+    private Date date;
 
-    public Event(int id, String name, String description, LocalDateTime date) {
+    public Event(int id, String name, String description, Date date) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -46,7 +46,7 @@ public class Event {
         return description;
     }
 
-    public LocalDateTime getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -55,7 +55,7 @@ public class Event {
         return "Event{" + "id=" + id + ", name='" + name + '\'' + ", description='" + description + '\'' + ", date=" + date + '}';
     }
 
-    public Long getDaysUntil() {
-        return ChronoUnit.DAYS.between(LocalDateTime.now(), getDate());
-    }
+//    public Long getDaysUntil() {
+//        return ChronoUnit.DAYS.between(LocalDateTime.now(), getDate());
+//    }
 }

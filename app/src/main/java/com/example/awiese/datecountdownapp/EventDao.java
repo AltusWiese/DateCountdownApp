@@ -7,7 +7,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
@@ -19,7 +19,7 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 @Dao
 public interface EventDao {
     @Query("SELECT * FROM " + Event.TABLE_NAME + " WHERE " + Event.DATE_FIELD + " > :minDate")
-    LiveData<List<Event>> getEvents(LocalDateTime minDate);
+    LiveData<List<Event>> getEvents(Date minDate);
 
     @Insert(onConflict = REPLACE)
     void addEvent(Event event);

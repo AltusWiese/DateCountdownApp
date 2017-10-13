@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.time.LocalDateTime;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +19,10 @@ public class EventListFragment extends Fragment {
     private RecyclerView recyclerView;
     private EventAdapter eventAdapter;
     private EventViewHolder eventViewHolder;
+    private EventDao eventDao;
+    private LocalDateTime localDateTime;
+
+
 
     public EventListFragment() {
         // Required empty public constructor
@@ -27,7 +33,13 @@ public class EventListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_event_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_event_list, container, false);
+//        eventDao = EventDatabase.getInstance(getContext()).eventDao();
+//        eventDao.getEvents(localDateTime).observe(this, events -> {
+//            Log.d(TAG, "Events Changed:" + events);
+//            eventAdapter.setItems(events);
+//        });
+        return rootView;
     }
 
 }
