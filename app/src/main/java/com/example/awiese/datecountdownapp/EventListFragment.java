@@ -33,13 +33,12 @@ public class EventListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_event_list, container, false);
-//        eventDao = EventDatabase.getInstance(getContext()).eventDao();
+        //        eventDao = EventDatabase.getInstance(getContext()).eventDao();
 //        eventDao.getEvents(localDateTime).observe(this, events -> {
 //            Log.d(TAG, "Events Changed:" + events);
 //            eventAdapter.setItems(events);
 //        });
-        return rootView;
+        return inflater.inflate(R.layout.fragment_event_list, container, false);
     }
 
 }

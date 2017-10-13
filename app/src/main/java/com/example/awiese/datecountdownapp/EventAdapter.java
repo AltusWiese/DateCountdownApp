@@ -5,9 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by AWiese on 2017/10/13.
- */
 
 public class EventAdapter extends RecyclerView.Adapter {
     @Override

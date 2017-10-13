@@ -12,10 +12,6 @@ import java.util.List;
 
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
-/**
- * Created by AWiese on 2017/10/12.
- */
-
 @Dao
 public interface EventDao {
     @Query("SELECT * FROM " + Event.TABLE_NAME + " WHERE " + Event.DATE_FIELD + " > :minDate")

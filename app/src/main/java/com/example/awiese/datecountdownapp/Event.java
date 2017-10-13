@@ -8,10 +8,6 @@ import java.util.Date;
 
 import static com.example.awiese.datecountdownapp.Event.TABLE_NAME;
 
-
-/**
- * Created by AWiese on 2017/10/12.
- */
 @Entity(tableName = TABLE_NAME)
 
 public class Event {
@@ -26,7 +22,7 @@ public class Event {
     @ColumnInfo(name = DATE_FIELD)
     private Date date;
 
-    public Event(int id, String name, String description, Date date) {
+    Event(int id, String name, String description, Date date) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -42,11 +38,11 @@ public class Event {
         return name;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return description;
     }
 
-    public Date getDate() {
+    Date getDate() {
         return date;
     }
 
