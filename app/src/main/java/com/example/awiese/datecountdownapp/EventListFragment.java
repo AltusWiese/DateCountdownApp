@@ -3,6 +3,7 @@ package com.example.awiese.datecountdownapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,9 @@ import android.view.ViewGroup;
  */
 public class EventListFragment extends Fragment {
 
+    private RecyclerView recyclerView;
+    private EventAdapter eventAdapter;
+    private EventViewHolder eventViewHolder;
 
     public EventListFragment() {
         // Required empty public constructor

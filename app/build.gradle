@@ -20,12 +20,16 @@ android {
     productFlavors {
     }
 }
-
+ext {
+    support_version ='26.1.0'
+    comp_version = '1.0.0-alpha9-1'
+}
 dependencies {
-    compile 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
-    compile 'android.arch.persistence.room:runtime:1.0.0-alpha9-1'
-    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
-    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha9-1"
+    compile "com.android.support:recyclerview-v7:$support_version"
+    compile "android.arch.lifecycle:extensions:$comp_version"
+    compile "android.arch.persistence.room:runtime:$comp_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$comp_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$comp_version"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
